@@ -33,7 +33,7 @@ public class Menu {
     }
 
     public int getPrice() {
-        return this.priceOfMenu.get(menu) * this.count;
+        return priceOfMenu.get(menu) * this.count;
     }
 
     private static void validateHasHyphen(String str) {
@@ -56,4 +56,6 @@ public class Menu {
             throw new IllegalArgumentException("[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요.");
         }
     }
+
+    public String getMenu() {return menu;}
 }
