@@ -3,6 +3,7 @@ package christmas.view;
 import christmas.entities.GiveawayPromotion;
 import christmas.entities.Menu;
 import christmas.entities.MenuList;
+import christmas.entities.benefit.ChrismasBenefit;
 
 import java.util.List;
 import java.util.Map;
@@ -33,5 +34,12 @@ public class OutputView {
             return;
         }
         System.out.println("없음");
+    }
+
+    public void printBenefit(Map<String, Integer> benefits) {
+        String orderString = benefits.keySet().stream().map(key ->  key + ": -" + String.format("%,d", benefits.get(key)) + "원").collect(Collectors.joining("\n"));
+
+        System.out.println("\n<혜택 내역>");
+        System.out.println(orderString);
     }
 }

@@ -12,7 +12,7 @@ public class WeekendBenefit {
         this.dDay = dDay;
     }
 
-    private int getBenefitPrice() {
+    public int getBenefitPrice() {
         boolean isWeekend = this.dDay % 7 == 1 || this.dDay % 7 == 2;
         if (!isWeekend) {
             return 0;
